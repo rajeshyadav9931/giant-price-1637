@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #nav {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 10% 35% 5% 5% 10% 10%;
+        justify-content: space-evenly;
+        height: 50px;
+        margin: auto;
+        padding: 10px;
+        font-family: "Maison Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    #nav>div {
+        width: fit-content;
+        height: 100%;
+
+    }
+
+    #nav>div:nth-child(1) img {
+        width: 100%;
+    }
+
+    #menu {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-evenly;
+    }
+
+    #menu div {
+        width: fit-content;
+        align-items: center;
+        padding: 5px;
+
+    }
+
+    #endbox {
+        display: flex;
+    }
+
+    #joinSection {
+        background-color: #36b0c7;
+        height: 500px;
+
+    }
+
+    #joinSection>div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        width: 60%;
+        height: 100%;
+        margin: auto;
+
+    }
+
+    #joinSection img {
+        width: 100%;
+    }
+
+    #passSection {
+        background-color: #f7e7f6;
+        height: auto;
+        margin: 7px;
+        text-align: center;
+    }
+
+    #passSection>div {
+        padding: 30px;
+        width: 60%;
+        margin: auto;
+    }
+
+    #textCon {
+        margin: auto;
+        width: 42%;
+    }
+
+    #passSection img {
+        width: 100%;
+    }
+
+    #gridSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    #gridSection img {
+        width: 100%;
+
+    }
+
+    #community img {
+        width: 100%;
+
+    }
+
+    #Plans {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: auto;
+    }
+
+    #main-container {
+        background-color: #f0f4f6;
+        padding: 80px;
+
+    }
+
+    #footer {
+        
+        display: flex;
+        padding: 70px;
+        justify-content: space-evenly;
+        background-color: #212432;
+        color: white;
+    }
+
+    #footer img {
+        width: 40%;
+    }
+
+    #footer-nav:nth-child(2){
+        text-emphasis: centre;
+    }
+
+
+    #footer>div {
+        border: 1px solid red;
+        width: 50%;
+    }
+    /* #footer>div:nth-child(2) {
+        display: flex;
+       
+        text-align: left;
+    } */
+
+    nav{
+        display: grid;
+        padding-right: 60px;
+
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    #nav1{
+        display: grid;
+        width: 80%;
+        padding: 20px;
+        margin: auto;
+        grid-template-columns: repeat(9,1fr);
+    }
+
+    #nav1 img{
+        width: 100%;
+
+    }
+    #nav1>div{
+        display: flex;
+        border: 1px solid red;
+        align-items: flex-end;
+    }
+
+</style>
+
+<body>
+    <div id="nav1">
+        <div><img src="/Img/Fitness buddy logo.png" alt=""></div>
+        <div>WORKOUTS</div>
+        <div>PROGRAMS</div>
+        <div>HEALTHY LIVING</div>
+        <div>COMMUNITY</div>
+        <div>ABOUT</div>
+        <div>MEMBERSHIP</div>
+        <div>Hi Sign In</div>
+        <div>Serch</div>
+
+    </div>
+    <div id="joinSection">
+        <div>
+            <div>
+                <h1>Feel Great.
+                    Body and Mind.</h1>
+                <p>Choose from hundreds of workouts, healthy recipes, relaxing meditations, and expert articles, for a
+                    whole body and mind approach to feeling great.</p>
+                <button>JOIN NOW</button>
+            </div>
+            <div>
+                <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/team-1440.webp" alt="IMG">
+            </div>
+
+        </div>
+    </div>
+
+    <div id="passSection">
+        <div>
+            <div id="textCon">
+                <h1>Introducing <br> FB Plus Passes</h1>
+                <p>Passes give you full access to everything FB Plus has to offer, without a long-term
+                    subscription. Choose a pass that fits your budget and your schedule.</p>
+                <button>BUY A PASS</button>
+            </div>
+
+            <div>
+                <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/passes-1440.webp" alt="1 day Pass">
+            </div>
+
+        </div>
+    </div>
+    <div id="gridSection">
+        <div>
+            <div>
+                <h1>Workout Videos</h1>
+                <p>Exercise with certified personal trainers whether you’re at home or on the road.</p>
+                <a href="">Find a Workout</a>
+            </div>
+            <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/workouts-1440.webp" alt="workouts">
+        </div>
+        <div>
+            <div>
+                <h1>Workout Videos</h1>
+                <p>Exercise with certified personal trainers whether you’re at home or on the road.</p>
+                <a href="">Find a Workout</a>
+            </div>
+            <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/programs-1440.webp" alt="programs">
+        </div>
+        <div>
+            <div>
+                <h1>Workout Videos</h1>
+                <p>Exercise with certified personal trainers whether you’re at home or on the road.</p>
+                <a href="">Find a Workout</a>
+            </div>
+            <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/articles-1440.webp" alt="Wellness">
+        </div>
+        <div>
+            <div>
+                <h1>Workout Videos</h1>
+                <p>Exercise with certified personal trainers whether you’re at home or on the road.</p>
+                <a href="">Find a Workout</a>
+            </div>
+            <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/recipes-1440.webp" alt="recipes">
+        </div>
+
+    </div>
+    <div id="community">
+        <h1>Supportive Community</h1>
+        <p>Stay motivated and engaged with a little help from a supportive community of other members.</p>
+        <a href="">Become a Member</a>
+        <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/community-2880.webp" alt="community">
+    </div>
+
+    <div id="main-container">
+        <h1>Not sure where to start?</h1>
+        <p>Programs offer day-to-day guidance on an interactive calendar to keep you on track.</p>
+        <div id="Plans">
+            <div>
+                <h2>Perfect for Beginners</h2>
+                <a
+                    href="https://www.fitnessblender.com/plans/fb-low-impact-round-2-fat-loss-program-40-minutes-or-less"></a>
+                <a href="">4 WEEKS PROGRAM - 34 MIN/DAY</a>
+                <h3>FB Low Impact Round 2 - Build Muscle & Burn Fat - 40 Minutes or Less</h3>
+                <h2>$14.99</h2>
+
+            </div>
+            <div>
+                <h2>Perfect for Beginners</h2>
+                <a
+                    href="https://www.fitnessblender.com/plans/fb-low-impact-round-2-fat-loss-program-40-minutes-or-less"></a>
+                <a href="">4 WEEKS PROGRAM - 34 MIN/DAY</a>
+                <h3>FB Low Impact Round 2 - Build Muscle & Burn Fat - 40 Minutes or Less</h3>
+                <h2>$14.99</h2>
+            </div>
+            <div>
+                <h2>Perfect for Beginners</h2>
+                <a
+                    href="https://www.fitnessblender.com/plans/fb-low-impact-round-2-fat-loss-program-40-minutes-or-less"></a>
+                <a href="">4 WEEKS PROGRAM - 34 MIN/DAY</a>
+                <h3>FB Low Impact Round 2 - Build Muscle & Burn Fat - 40 Minutes or Less</h3>
+                <h2>$14.99</h2>
+            </div>
+            <div>
+                <h2>Perfect for Beginners</h2>
+                <a
+                    href="https://www.fitnessblender.com/plans/fb-low-impact-round-2-fat-loss-program-40-minutes-or-less"></a>
+                <a href="">4 WEEKS PROGRAM - 34 MIN/DAY</a>
+                <h3>FB Low Impact Round 2 - Build Muscle & Burn Fat - 40 Minutes or Less</h3>
+                <h2>$14.99</h2>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div>
+            <img src="/Img/Footer logo.png" alt="">
+        </div>
+        <div>
+            <nav class="footer-nav">
+                <ul>
+                    <ul> WORKOUTS </ul>
+                    <ul> WORKOUT VIDEOS </ul>
+                    <ul> CUSTOM WORKOUTS </ul>
+                    <ul> PROGRAMS</ul>
+                    <ul>WORKOUT PROGRAMS</ul>
+                    <ul>MEAL PLANS</ul>
+                    <ul>PILOT PROGRAMS</ul>
+                    <ul> ROUTINES</ul>
+                </ul>
+                <ul>
+                    <ul>HEALTHY LIVING</ul>
+                    <ul>  FITNESS</ul>
+                    <ul> HEALTH</ul>
+                    <ul> NUTRITION</ul>
+                    <ul> HEALTHY RECIPES</ul>
+                    <ul>EXPERTS</ul>
+                </ul>
+                <ul>
+                    <ul>ABOUT</ul>
+                    <ul>CAREERS</ul>
+                    <ul>TUTORIALS</ul>
+                    <ul>OUR TEAM</ul>
+                    <ul>B2B OPTIONS</ul>
+                </ul>
+                <ul>
+                    <ul> MEMBERSHIP</ul>
+                    <ul>FB PLUS</ul>
+                    <ul>COMMUNITY</ul>
+                    <ul>BLOG</ul>
+                    <ul>CONTACT US</ul>
+                    <ul> FAQ</ul>
+                    <ul>STORE</ul>
+                </ul>           
+            </nav>  
+        </div>
+    </div>
+</body>
+
+</html>
