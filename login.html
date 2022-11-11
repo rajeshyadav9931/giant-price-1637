@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si</title>
+</head>
+<body>
+    <form>
+        <input id="username" type="text" placeholder="Username">
+        <input id="password" type="password" placeholder="Password">
+        <input type="submit" value="submit">
+
+    </form>
+    
+    <a href="SignUp.html">Sign Up</a>
+</body>
+</html>
+<Script>
+
+    let ArrObj= JSON.parse(localStorage.getItem("detail")) || [];
+
+    let form= document.querySelector("form")
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let obj={
+            username: form.username.value,
+            password: form.password.value,
+        };
+
+        if(username.value=="" || password==""){
+            alert("Please fill all the details");
+        }else{
+            ArrObj.push(obj);
+            
+        }
+
+        ArrObj.forEach(element => {
+            if(username.value===element.username && password.value===element.password){
+                 alert("LogIn successfully");
+                 window.location.href="subscription.html"
+            }else{
+                alert("LogIn Credential are incorrect")
+            }  
+        });
+    })
+
+</Script>
