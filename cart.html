@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+   
+    
+</body>
+</html>
+<script>
+    // Write all necessery JS here 
+    let CartData=JSON.parse(localStorage.getItem("cart"))||[];
+    displayData(CartData);
+
+    function displayData(data) {
+       
+
+        data.forEach(element => {
+            let div = document.createElement("div")
+
+            let div1 = document.createElement("div")
+
+            let div2 = document.createElement("div")
+
+            let img = document.createElement("img")
+            img.src = element.image;
+
+            let type = document.createElement("h6")
+            type.innerText= element.type;
+
+            let title = document.createElement("h4")
+            title.innerText= element.title;
+
+            let price = document.createElement("h2")
+            price.innerText="$"+element.price;
+
+            div1.append(type,title,price);
+
+            div.append(img,div1,div2)
+
+            document.querySelector("body").append(div);
+
+        });
+
+    }
+     
+   
+
+
+</script>

@@ -32,6 +32,10 @@
     margin: 5px;
 }
 
+.fa-sharp{
+    font-size: 30px;
+}
+
 #joinSection {
     background-color: #36b0c7;
    font-family: "Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;;

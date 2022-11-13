@@ -33,6 +33,10 @@
     margin: 5px;
 }
 
+.fa-sharp{
+    font-size: 30px;
+}
+
 /* Top section */
 #Top-Section {
     background-image: linear-gradient(to right, #cde6fe,#d5d2ed , #f5e8d8);

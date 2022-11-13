@@ -5,16 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
+    <style>
+        form{
+            width: 20%;
+            height: 400px;
+            margin: 50px auto;
+            padding: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         
+        }
+        h1{
+           text-align: center;
+        }
+
+        input,select,textarea{
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"]{
+           
+            background-color: rgb(67, 67, 75);
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+    </style>
 </head>
 <body>
     <form>
-        <input id="name" type="text" placeholder="Name">
-        <input id="username" type="text" placeholder="Username">
-        <input id="password" type="password" placeholder="Password">
+        <h1>Sign Up</h1>
+        <label for="Name">Name</label><br>
+        <input id="name" type="text" placeholder="Name"><br>
+        <label for="Username">User Name</label><br>
+        <input id="username" type="text" placeholder="Username"><br>
+        <label for="email">Email</label><br>
+        <input type="email" placeholder="Email"><br>
+        <label for="Password">Password</label><br>
+        <input id="password" type="password" placeholder="Password"><br>
         <input type="submit" value="submit">
+        
+        <p>If already have account <a href="login.html">Log In</a></p>
 
     </form>
-    <a href="login.html">Log In</a>
+   
 </body>
 </html>
 <Script>
@@ -26,6 +67,7 @@
         let obj={
             Name: form.name.value,
             Username: form.username.value,
+            Email: form.email
             Password: form.password.value,
         };
 

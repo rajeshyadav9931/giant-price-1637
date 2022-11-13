@@ -4,17 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Si</title>
+    <title>Log In</title>
+    <style>
+        form{
+            width: 20%;
+            height: 400px;
+            margin: 50px auto;
+            padding: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+         
+        }
+        h1{
+           text-align: center;
+        }
+
+        input,select,textarea{
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"]{
+           
+            background-color: rgb(67, 67, 75);
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <form>
+        <h1>Log In</h1>
+        <label for="Username">User Name</label><br>
         <input id="username" type="text" placeholder="Username">
+        <label for="Password">Password</label><br>
         <input id="password" type="password" placeholder="Password">
         <input type="submit" value="submit">
 
+        <p>If not have any account <a href="SignUp.html">Sign Up</a></p>
+
     </form>
     
-    <a href="SignUp.html">Sign Up</a>
+    
 </body>
 </html>
 <Script>

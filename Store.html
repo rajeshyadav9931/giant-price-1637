@@ -14,7 +14,8 @@
     <div id="container">
         <div id="navigation">
             <div>
-                <img src="/Img/Fitness buddy logo.png" alt="">
+                <a href="/"><img src="/Img/Fitness buddy logo.png" alt=""></a>
+
             </div>
             <div>
                 <a>WORKOUTS</a>
@@ -34,7 +35,9 @@
                 <div>
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div><i class="fa-sharp fa-solid fa-bag-shopping"></i></div>
+                <div>
+                    <a href="/cart.html"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
+                </div>
             </div>
         </div>
 
@@ -48,77 +51,7 @@
                 Multiple passes can be purchased at once for longer access.</p>
             <p id="notes">Note: Passes cannot be used at the same time as a monthly or yearly FB Plus subscription.</p>
             <div id="day-pass">
-                <div>
-                    <img src="https://d18zdz9g6n5za7.cloudfront.net/products/640/640-16-1-day-pass-a272.jpg"
-                        alt="1 day pass">
-                    <div>
-                        <div>
-                            <h6>FB PLUS PASS</h6>
-                            <h3>1-Day Pass</h3>
-                            <h2>$1.99</h2>
-                        </div>
-                        <div>
-                            <button><i class="fa-sharp fa-solid fa-bag-shopping"></i>ADD TO BAG</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div>
-                    <img src="https://d18zdz9g6n5za7.cloudfront.net/products/640/640-15-7-day-pass-8070.jpg"
-                        alt="7 day pass">
-                    <div>
-                        <div>
-                            <h6>FB PLUS PASS</h6>
-                            <h3>7-Day Pass</h3>
-                            <h2>$3.99</h2>
-                        </div>
-                        <div>
-                            <button><i class="fa-sharp fa-solid fa-bag-shopping"></i>ADD TO BAG</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d18zdz9g6n5za7.cloudfront.net/products/640/640-14-14-day-pass-b885.jpg"
-                        alt="14 day pass">
-                    <div>
-                        <div>
-                            <h6>FB PLUS PASS</h6>
-                            <h3>14-Day Pass</h3>
-                            <h2>$7.99</h2>
-                        </div>
-                        <div>
-                            <button><i class="fa-sharp fa-solid fa-bag-shopping"></i>ADD TO BAG</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d18zdz9g6n5za7.cloudfront.net/products/640/640-13-30-day-pass-9318.jpg"
-                        alt="30 day pass">
-                    <div>
-                        <div>
-                            <h6>FB PLUS PASS</h6>
-                            <h3>30-Day Pass</h3>
-                            <h2>$11.99</h2>
-                        </div>
-                        <div>
-                            <button><i class="fa-sharp fa-solid fa-bag-shopping"></i>ADD TO BAG</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="https://d18zdz9g6n5za7.cloudfront.net/products/640/640-12-90-day-pass-89f6.jpg"
-                        alt="90 day pass">
-                    <div>
-                        <div>
-                            <h6>FB PLUS PASS</h6>
-                            <h3>90-Day Pass</h3>
-                            <h2>$29.99</h2>
-                        </div>
-                        <div>
-                            <button><i class="fa-sharp fa-solid fa-bag-shopping"></i>ADD TO BAG</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- append here -->
 
             </div>
 
@@ -273,7 +206,7 @@
                     <a href="/">
                         <img src="/Img/Fitness buddy footer logo.png" alt="">
                     </a>
-                    
+
                 </div>
                 <div>
                     <nav class="footer-nav">
@@ -303,12 +236,12 @@
                             <li>B2B OPTIONS</li>
                         </ul>
                         <ul>
-                            <li class="main"> MEMBERSHIP</li>
+                            <li class="main">MEMBERSHIP</li>
                             <li class="main">FB PLUS</li>
                             <li class="main">COMMUNITY</li>
                             <li class="main">BLOG</li>
                             <li class="main">CONTACT US</li>
-                            <li class="main"> FAQ</li>
+                            <li class="main">FAQ</li>
                             <li class="main">STORE</li>
                         </ul>
                     </nav>
@@ -335,3 +268,60 @@
 </body>
 
 </html>
+<script>
+    let url = "https://636fbc8cf2ed5cb047e41e6a.mockapi.io/products"
+
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => displayData(data))
+
+
+
+    function displayData(data) {
+        document.querySelector("#day-pass").innerHTML="";
+
+        data.forEach(element => {
+            let div = document.createElement("div")
+
+            let div1 = document.createElement("div")
+
+            let div2 = document.createElement("div")
+
+            let img = document.createElement("img")
+            img.src = element.image;
+
+            let type = document.createElement("h6")
+            type.innerText= element.type;
+
+            let title = document.createElement("h4")
+            title.innerText= element.title;
+
+            let price = document.createElement("h2")
+            price.innerText="$"+element.price;
+
+
+            let addToCart = document.createElement("button")
+            addToCart.innerText="Add To Cart"
+            addToCart.addEventListener("click",function(){
+                AddtoCart("cart",element);
+            })
+
+            div2.append(addToCart);
+
+            div1.append(type,title,price);
+
+            div.append(img,div1,div2)
+
+            document.querySelector("#day-pass").append(div);
+
+        });
+
+
+        function AddtoCart(key,value){
+          let newdata=JSON.parse(localStorage.getItem(key))||[];
+          newdata.push(value);
+          localStorage.setItem("cart",JSON.stringify(newdata));
+        }
+
+    }
+</script>
