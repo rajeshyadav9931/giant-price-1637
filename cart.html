@@ -1,56 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    
+    <style>
+        #container {
+            width: 1600px;
+            margin: auto;
+            font-size: 20px;
+        }
+
+        /* Navigation Bar */
+        #navigation {
+            width: 80%;
+            height: auto;
+            margin: auto;
+            font-size: 13px;
+            font-weight: 600;
+            font-family: "Maison Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            display: grid;
+            grid-template-columns: 15% 65% 20%;
+        }
+
+        #navigation img {
+            width: 100%;
+        }
+
+        #navigation>div:nth-child(2) {
+            display: flex;
+            padding: 5px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #navigation>:last-child {
+            display: flex;
+            margin: auto;
+        }
+
+        #navigation>:last-child>div {
+            margin: 5px;
+        }
+
+        .fa-sharp {
+            font-size: 30px;
+        }
+
+
+
+        #top {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #container {
+            width: 80%;
+            display: grid;
+            padding: 50px 0px;
+            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        #container>div>div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+
+        #container>div {
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+        button {
+            margin-bottom: 20px;
+            background-color: #4396cb;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            color: white;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* footer */
+        #footer {
+            background-color: #212432;
+            color: white;
+
+        }
+
+
+
+
+        hr {
+            margin: 0 5%;
+            border: 1px solid #818485;
+        }
+
+        #footer>div:first-child {
+            display: flex;
+            padding: 70px;
+            justify-content: space-evenly;
+
+        }
+
+        .footer-nav>ul li {
+            margin-bottom: 10px;
+        }
+
+        #footer img {
+            width: 60%;
+        }
+
+        #footer-nav:nth-child(2) {
+            text-emphasis: centre;
+        }
+
+        #footer>div>div {
+            width: 40% 60%;
+        }
+
+        nav {
+            display: grid;
+            padding-right: 60px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+
+        li {
+            list-style: none;
+            color: rgb(164, 156, 156);
+        }
+
+        #credits {
+            padding: 5px 5%;
+        }
+
+        #end {
+            padding-top: 32px;
+            border-top: 1px solid #3a3d4d;
+            width: 100%;
+            display: -webkit-box;
+            display: flex;
+        }
+
+        #end ul {
+            margin: 0rem 0rem 0rem auto;
+            display: flex;
+        }
+
+        #end ul>li {
+            margin: 5px;
+        }
+
+        .main {
+            color: #f0f4f6;
+        }
+    </style>
+
+
 </head>
+
 <body>
-   
-    
+    <!-- <div id="container"> -->
+    <div id="navigation">
+        <div>
+            <a href="/"> <img src="/Img/Fitness buddy logo.png" alt=""></a>
+
+        </div>
+        <div>
+            <a>WORKOUTS</a>
+            <a>PROGRAMS</a>
+            <a>HEALTY LIVING</a>
+            <a>COMMUNITY</a>
+            <a>ABOUT</a>
+            <a href="/Store.html">STORE</a>
+            <a href="/Membership.html">MEMBERSHIP</a>
+
+        </div>
+        <div>
+            <div>
+                Hi <a href="/login.html">Sign In</a>
+                <P>MY FITNESS</P>
+            </div>
+        </div>
+    </div>
+
+    <div id="top">
+        <h1 id="g">YOUR CART</h1>
+        <h1 id="total">Total</h1>
+    </div>
+
+    <div id="container">
+        <!-- append here -->
+
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <div>
+            <div>
+                <img src="/Img/Footer logo.png" alt="">
+            </div>
+            <div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li class="main"> WORKOUTS </li>
+                        <li> WORKOUT VIDEOS </li>
+                        <li> CUSTOM WORKOUTS </li>
+                        <li class="main"> PROGRAMS</li>
+                        <li>WORKOUT PROGRAMS</li>
+                        <li>MEAL PLANS</li>
+                        <li>PILOT PROGRAMS</li>
+                        <li> ROUTINES</li>
+                    </ul>
+                    <ul>
+                        <li class="main">HEALTHY LIVING</li>
+                        <li> FITNESS</li>
+                        <li> HEALTH</li>
+                        <li> NUTRITION</li>
+                        <li> HEALTHY RECIPES</li>
+                        <li>EXPERTS</li>
+                    </ul>
+                    <ul>
+                        <li class="main">ABOUT</li>
+                        <li>CAREERS</li>
+                        <li>TUTORIALS</li>
+                        <li>OUR TEAM</li>
+                        <li>B2B OPTIONS</li>
+                    </ul>
+                    <ul>
+                        <li class="main"> MEMBERSHIP</li>
+                        <li class="main">FB PLUS</li>
+                        <li class="main">COMMUNITY</li>
+                        <li class="main">BLOG</li>
+                        <li class="main">CONTACT US</li>
+                        <li class="main"> FAQ</li>
+                        <li class="main">STORE</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr>
+        <div id="credits">
+            <div id="end">
+                <p>Copyright © 2022 Fitness Blender. All rights reserved.</p>
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+                <ul>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-pinterest"></i></li>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
 </body>
+
 </html>
 <script>
     // Write all necessery JS here 
-    let CartData=JSON.parse(localStorage.getItem("cart"))||[];
+    let CartData = JSON.parse(localStorage.getItem("cart")) || [];
     displayData(CartData);
 
-    function displayData(data) {
-       
+    let CardTotal=document.querySelector("#total");
+    
+    let Sum=CartData.reduce((acc,el,ind)=>{
+        return acc+=el.price;
+      },0);
 
-        data.forEach(element => {
+     CardTotal.innerText="Total :- $"+Sum;
+
+
+    function displayData(data) {
+        document.querySelector("#container").innerHTML = "";
+
+
+        
+
+        
+
+        data.forEach((element, index) => {
             let div = document.createElement("div")
 
             let div1 = document.createElement("div")
 
-            let div2 = document.createElement("div")
+            let div21 = document.createElement("div")
+
+            let div22 = document.createElement("div")
 
             let img = document.createElement("img")
             img.src = element.image;
 
             let type = document.createElement("h6")
-            type.innerText= element.type;
+            type.innerText = element.type;
 
             let title = document.createElement("h4")
-            title.innerText= element.title;
+            title.innerText = element.title;
 
             let price = document.createElement("h2")
-            price.innerText="$"+element.price;
+            price.innerText = "$" + element.price;
 
-            div1.append(type,title,price);
+            let remove = document.createElement("button")
+            remove.innerText = "Remove";
+            remove.addEventListener("click", function () {
+                Remove(data, index);
+            })
 
-            div.append(img,div1,div2)
+            div21.append(type, title, price)
 
-            document.querySelector("body").append(div);
+            div22.append(remove)
+
+            div1.append(div21, div22);
+
+            div.append(img, div1)
+
+            document.querySelector("#container").append(div);
 
         });
 
     }
-     
-   
 
+
+    function Remove(data, index) {
+        data.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(data))
+        displayData(data)
+    }
 
 </script>

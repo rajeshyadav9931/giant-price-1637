@@ -269,59 +269,106 @@
 
 </html>
 <script>
-    let url = "https://636fbc8cf2ed5cb047e41e6a.mockapi.io/products"
+    let data = [
+        {
+            title: "1-Day Pass",
+            image: "https://d18zdz9g6n5za7.cloudfront.net/products/640/640-16-1-day-pass-a272.jpg",
+            type: "FB PLUS PASS",
+            price: 1.99,
+            i: "5"
+        },
+        {
+            title: "7-Day Pass",
+            image: "https://d18zdz9g6n5za7.cloudfront.net/products/640/640-15-7-day-pass-8070.jpg",
+            type: "FB PLUS PASS",
+            price: 3.99,
+            id: "6"
+        },
+        {
+            title: "15-Day Pass",
+            image: "https://d18zdz9g6n5za7.cloudfront.net/products/640/640-14-14-day-pass-b885.jpg",
+            type: "FB PLUS PASS",
+            price: 7.99,
+            id: "7"
+        },
+        {
+            title: "30-Day Pass",
+            image: "https://d18zdz9g6n5za7.cloudfront.net/products/640/640-13-30-day-pass-9318.jpg",
+            type: "FB PLUS PASS",
+            price: 11.99,
+            id: "8"
+        },
+        {
+            title: "90-Day Pass",
+            image: "https://d18zdz9g6n5za7.cloudfront.net/products/640/640-12-90-day-pass-89f6.jpg",
+            type: "FB PLUS PASS",
+            price: 29.99,
+            id: "9"
+        }
+    ];
 
-    fetch(url)
-        .then((res) => res.json())
-        .then((data) => displayData(data))
+
+    // let url = "https://636fbc8cf2ed5cb047e41e6a.mockapi.io/products"
+
+    // fetch(url)
+    //     .then((res) => res.json())
+    //     .then((data) => displayData(data))
 
 
 
     function displayData(data) {
-        document.querySelector("#day-pass").innerHTML="";
+        document.querySelector("#day-pass").innerHTML = null;
 
         data.forEach(element => {
             let div = document.createElement("div")
 
             let div1 = document.createElement("div")
 
-            let div2 = document.createElement("div")
+            let div21 = document.createElement("div")
+
+            let div22 = document.createElement("div")
 
             let img = document.createElement("img")
             img.src = element.image;
 
             let type = document.createElement("h6")
-            type.innerText= element.type;
+            type.innerText = element.type;
 
             let title = document.createElement("h4")
-            title.innerText= element.title;
+            title.innerText = element.title;
 
             let price = document.createElement("h2")
-            price.innerText="$"+element.price;
+            price.innerText = "$" + element.price;
 
 
             let addToCart = document.createElement("button")
-            addToCart.innerText="Add To Cart"
-            addToCart.addEventListener("click",function(){
-                AddtoCart("cart",element);
+            addToCart.innerText = "Add To Cart"
+            addToCart.addEventListener("click", function () {
+                AddtoCart("cart", element);
             })
 
-            div2.append(addToCart);
+            div21.append(type, title, price);
 
-            div1.append(type,title,price);
+            div22.append(addToCart);
 
-            div.append(img,div1,div2)
+            div1.append(div21, div22)
+
+            div.append(img, div1)
 
             document.querySelector("#day-pass").append(div);
 
         });
 
 
-        function AddtoCart(key,value){
-          let newdata=JSON.parse(localStorage.getItem(key))||[];
-          newdata.push(value);
-          localStorage.setItem("cart",JSON.stringify(newdata));
-        }
+
 
     }
+
+    function AddtoCart(key, value) {
+        let newdata = JSON.parse(localStorage.getItem(key)) || [];
+        newdata.push(value);
+        localStorage.setItem("cart", JSON.stringify(newdata));
+    }
+
+    displayData(data)
 </script>

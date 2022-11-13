@@ -60,26 +60,37 @@
     let form= document.querySelector("form")
     form.addEventListener("submit",function(event){
         event.preventDefault();
-        let obj={
-            username: form.username.value,
-            password: form.password.value,
-        };
+        // let obj={
+        //     username: form.username.value,
+        //     password: form.password.value,
+        // };
 
-        if(username.value=="" || password==""){
+        let username=document.querySelector("#username").value;
+        let password=document.querySelector("#password").value;
+
+        if(username=="" || password==""){
             alert("Please fill all the details");
-        }else{
-            ArrObj.push(obj);
-            
         }
 
-        ArrObj.forEach(element => {
-            if(username.value===element.username && password.value===element.password){
-                 alert("LogIn successfully");
+       console.log( ArrObj,username,password)
+
+    
+        let count=0;
+        for(let i=0;i<ArrObj.length;i++){
+            console.log(ArrObj[i].username)
+            if(username===ArrObj[i].username && password===ArrObj[i].password){
+                 count++;
                  window.location.href="subscription.html"
-            }else{
-                alert("LogIn Credential are incorrect")
-            }  
-        });
+            } 
+        }
+
+        if(count==0){
+            alert("login credential is incorrect")
+        }else{
+            alert("login Successfull")
+        }
+        
+        
     })
 
 </Script>
